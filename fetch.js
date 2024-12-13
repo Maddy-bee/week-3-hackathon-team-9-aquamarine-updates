@@ -14,7 +14,6 @@ async function fetchData() {
     console.log(data.lyrics); // Test .lyrics to output text only
     return data;
   } catch (error) {
-    console.error('Error fetching data:', error);
     alert("We're sorry, we don't have that song yet, please try again!")
     // Handle any errors
   }
