@@ -1,13 +1,69 @@
-body {
-    background-color: black;
-    color: aquamarine;
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  color: aquamarine;
+  font: 400 15px/1.8 "Lato", sans-serif;
 }
 
-.top-container, .bottom-container {
-    display: flex;
-    height: calc((100vh - 79.547px)/2); /* full page - (content + margins + borders) */
-    justify-content: center;
+.search-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+
+  background-image: url("karaoke.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buffer {
+  width: 100%;
+  min-height: 10vh;
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 30px "Lato", sans-serif;
+  font-weight: bold;
+  color: aquamarine;
+}
+
+.colored-lyrics-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+  background-color: aquamarine;
+  color: black;
+  gap: 1.6em;
+}
+
+#lyrics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 300px;
+  padding-right: 300px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: justify;
 }
