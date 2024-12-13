@@ -1,4 +1,13 @@
 body {
     background-color: black;
     color: aquamarine;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.top-container, .bottom-container {
+    display: flex;
+    height: calc((100vh - 79.547px)/2); /* full page - (content + margins + borders) */
+    justify-content: center;
 }
