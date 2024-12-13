@@ -11,7 +11,7 @@ async function fetchData() {
     }
     const data = await response.json();
     // Handle your data
-    // console.log(data.lyrics); // Test .lyrics to output text only
+    console.log(data.lyrics); // Test .lyrics to output text only
     return data;
   } catch (error) {
     console.error('Error fetching data:', error);
