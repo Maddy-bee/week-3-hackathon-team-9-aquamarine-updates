@@ -33,9 +33,28 @@ let theLyrics = await fetchData();
 displayLyrics(theLyrics);
 }
 
-// grabs the lyrics element, and replaces the textContent with the new lyrics
-function displayLyrics(lyricString) {
-let lyrics = document.getElementById("lyrics");
-lyrics.textContent = lyricString.lyrics;
+function displayLyrics(lyricObject) {
+  let lyrics = document.getElementById("lyrics");
+
+  // Split the lyrics by new lines, then append each line as a separate <p> element
+  let lyricsArray = lyricObject.lyrics.split("\n");
+
+  // Clear any existing content
+  lyrics.textContent = "";
+
+  // Append each line as a separate paragraph element
+  lyricsArray.forEach(line => {
+    let paragraph = document.createElement("p");
+    paragraph.textContent = line; // Add the line of lyrics as text
+    lyrics.appendChild(paragraph); // Append the paragraph to the lyrics element
+  });
 }
+
+
+
+// // grabs the lyrics element, and replaces the textContent with the new lyrics
+// function displayLyrics(lyricString) {
+// let lyrics = document.getElementById("lyrics");
+// lyrics.textContent = lyricString.lyrics;
+// }
 
